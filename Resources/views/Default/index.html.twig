@@ -1,0 +1,25 @@
+{% extends 'GanemosMadridFirmasApoyoBundle::layout.html.twig' %}
+
+{% block body %}
+
+    <h1>Firmas de apoyo</h1>
+
+    <table class="table table-striped ">
+
+        <tr>
+            <th>Nombre</th>
+            <th>Actividad</th>
+            <th>Provincia</th>
+        </tr>
+        
+        {% for firma in firmas %}
+            <tr>
+                <td>{% if firma.ocultarNombre == 1 %}{{ firma.nombre }}{% else %}**********{% endif %}</td>
+                <td>{{ firma.actividad }}</td>
+                <td>{{ firma.provincia }}</td>
+            </tr>
+        {% endfor %}
+
+    </table>
+
+{% endblock %}
