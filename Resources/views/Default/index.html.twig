@@ -14,7 +14,7 @@
         
         {% for firma in firmas %}
             <tr>
-                <td>{% if firma.ocultarNombre == 1 %}{{ firma.nombre }}{% else %}**********{% endif %}</td>
+                <td>{% if firma.ocultarNombre == 0 %}{{ firma.nombre }}{% else %}**********{% endif %}</td>
                 <td>{{ firma.actividad }}</td>
                 <td>{{ firma.provincia }}</td>
             </tr>
