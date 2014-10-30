@@ -15,12 +15,12 @@ class DefaultController extends Controller {
      * @Route("/apoyos")
      */
     public function indexAction() {
-        
+
         $firmas = $this->getDoctrine()->getEntityManager()
-                ->getRepository('GanemosMadridFirmasApoyoBundle:Firma')->findAll();
-        
+                        ->getRepository('GanemosMadridFirmasApoyoBundle:Firma')->findAll();
+
         return $this->render('GanemosMadridFirmasApoyoBundle:Default:index.html.twig', array(
-            'firmas' => $firmas,
+                    'firmas' => $firmas,
         ));
     }
 
@@ -36,6 +36,9 @@ class DefaultController extends Controller {
 
         if ($form->isValid()) {
 
+            $firma->setProvincia($request->request->get('provincia'));
+            $firma->setCiudad($request->request->get('ciudad'));
+            
             $em = $this->getDoctrine()->getManager();
             $em->persist($firma);
             $em->flush();
@@ -47,12 +50,11 @@ class DefaultController extends Controller {
                     'form' => $form->createView(),
         ));
     }
-    
+
     /**
      * @Route("/apoyos/firmar_ok", name="ok")
      */
-    public function firmarOkAction()
-    {
+    public function firmarOkAction() {
         return $this->render('GanemosMadridFirmasApoyoBundle:Default:firmar_ok.html.twig');
     }
 

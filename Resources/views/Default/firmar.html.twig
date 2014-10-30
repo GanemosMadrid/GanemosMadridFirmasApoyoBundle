@@ -2,6 +2,41 @@
 
 {% block body %}
 
-    {{ form(form) }}
-
+    {{ form_start(form) }}
+    
+    {{ form_errors(form) }}
+    
+    {{ form_widget(form) }}
+    
+    <div class="third" id="grupo_provincia">
+<label for="provincia">Província</label>
+<input id="provincia" name="provincia" type="hidden">
+<select id="select_provincia">
+</select>
+</div>
+<div class="third" id="grupo_pais">
+<label for="pais">País</label>
+<input id="pais" name="pais" type="hidden">
+<select id="select_pais">
+</select>
+</div>
+<div class="third" id="grupo_ciudad">
+<label for="ciudad">Ciutat</label>
+<input id="ciudad" name="ciudad" type="hidden">
+<select id="select_ciudad">
+</select>
+</div>
+<div class="third" id="grupo_barrio">
+<label for="barrio">Barri</label>
+<input id="barrio" name="barrio" type="hidden">
+<select id="select_barrio">
+</select>
+</div>
+    
+    <input type="submit" />
+    
+    {{ form_end(form) }}
+    
+    <script src="{{ asset('bundles/ganemosmadridfirmasapoyo/js/main.js') }}"></script>
+    
 {% endblock %}
