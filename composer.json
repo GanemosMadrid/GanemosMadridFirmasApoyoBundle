@@ -1,0 +1,31 @@
+{
+    "name":        "ganemosmadrid/firmasapoyo-bundle",
+    "type":        "symfony-bundle",
+    "description": "Formulario para las firmas de apoyo",
+    "keywords":    ["GanemosMadrid", "symfony", "bundle"],
+    "homepage":    "http://github.com/GanemosMadrid/GanemosMadridFirmasApoyoBundle",
+    "license":     "MIT",
+
+    "authors": [
+        {
+            "name": "Ganemos Madrid",
+            "homepage": "http://github.com/GanemosMadrid"
+        }
+    ],
+
+    "require": {
+        "php":                      ">=5.3.2",
+        "symfony/symfony": "2.5.*",
+        "knplabs/knp-paginator-bundle": "2.4.*"
+    },
+
+    "minimum-stability": "dev",
+
+    "autoload": {
+        "psr-0": {
+            "GanemosMadridFirmasApoyoBundle": ""
+        }
+    },
+
+    "target-dir": "GanemosMadridFirmasApoyoBundle"
+}
