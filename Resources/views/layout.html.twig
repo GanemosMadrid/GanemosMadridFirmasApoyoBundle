@@ -9,13 +9,13 @@
 
         <!-- favicon -->
 
-
         <!--[if IE]><![endif]-->
 
         <link rel="alternate" type="application/rss+xml" title="Ganemos Madrid &raquo; Feed" href="http://ganemosmadrid.info/feed/" />
         <link rel="alternate" type="application/rss+xml" title="Ganemos Madrid &raquo; RSS de los comentarios" href="http://ganemosmadrid.info/comments/feed/" />
         <link rel="alternate" type="application/rss+xml" title="Ganemos Madrid &raquo; Programa y contenidos RSS de la categoría" href="http://ganemosmadrid.info/category/programa-y-contenidos/feed/" />
-        <link rel="stylesheet" href="{{ asset('bundles/ganemosmadridfirmasapoyo/css/bootstrap.min.css') }}">
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
         <link rel="stylesheet" href="{{ asset('bundles/ganemosmadridfirmasapoyo/css/app.css') }}">
         <!-- Latest compiled and minified JavaScript -->
         <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
@@ -34,7 +34,7 @@
         <link rel="shortcut icon" href="http://ganarmadrid.net/wp-content/uploads/2014/07/favicon.png" />
         <link rel="icon" href="http://ganarmadrid.net/wp-content/uploads/2014/07/favicon1.png" type="image/gif"/>
     </head>
-    
+
     <body>
         <header role="banner" class="site-header" id="masthead">
             <div class="container">
@@ -48,11 +48,10 @@
 
         <div class="container">
             <div class="col-sm-6 col-md-offset-3">
-                
-                {% form_theme form 'GanemosMadridFirmasApoyoBundle::form_theme.html.twig' %}
-                
+
                 {% block body %}
                 {% endblock %}
+                
             </div>
         </div>
     </body>
