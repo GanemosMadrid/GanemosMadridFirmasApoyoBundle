@@ -2,7 +2,7 @@
     {% spaceless %}
         {% if errors|length > 0 %}
             <div class="alert alert-danger">
-                <ul> 
+                <ul class="list-unstyled"> 
                     {% for error in errors %}
                         <li>{{ error.message }}</li>
                         {% endfor %}

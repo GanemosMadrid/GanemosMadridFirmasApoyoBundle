@@ -23,3 +23,7 @@ a.btn-default:hover,
 a.btn-default {
     color: white;
 }
+
+.alert {
+    padding: 5px;
+}
