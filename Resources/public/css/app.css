@@ -27,3 +27,7 @@ a.btn-default {
 .alert {
     padding: 5px;
 }
+
+.row {
+    margin-bottom: 10px;
+}

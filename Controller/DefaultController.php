@@ -21,7 +21,7 @@ class DefaultController extends Controller {
 
         $paginator = $this->get('knp_paginator');
         $pagination = $paginator->paginate(
-                $firmas, $this->get('request')->query->get('page', 1), 2
+                $firmas, $this->get('request')->query->get('page', 1), 20
         );
 
         return $this->render('GanemosMadridFirmasApoyoBundle:Default:index.html.twig', array('pagination' => $pagination));
