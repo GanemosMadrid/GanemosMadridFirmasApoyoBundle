@@ -6,9 +6,7 @@ select > option {
     font-weight: 700;
 }
 
-#ganemosmadrid_plenarioformbundle_participante_primeraVez label, 
-#ganemosmadrid_plenarioformbundle_participante_presentacion label, 
-#ganemosmadrid_plenarioformbundle_participante_listaInformacion label {
+#ganemosmadrid_firmasapoyobundle_firma_suscribirseLista label {
     padding-left: 5px;
     padding-right: 20px;
 }

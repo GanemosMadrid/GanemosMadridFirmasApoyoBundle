@@ -20,12 +20,13 @@ class FirmaType extends AbstractType {
                 ->add('actividad')
                 //->add('provincia', 'choice')
                 //->add('ciudad', 'choice')
-                ->add('ocultarNombre', 'checkbox', array('required' => false))
+                ->add('ocultarNombre', 'checkbox', array(
+                    'required' => false))
                 ->add('suscribirseLista', 'choice', array(
                     'choices' => array('Si', 'No', 'Ya estoy inscrita'),
                     'expanded' => true,
                 ))
-                //->add('save', 'submit')
+                ->add('save', 'submit')
         ;
     }
 

@@ -2,41 +2,76 @@
 
 {% block body %}
 
-    {{ form_start(form) }}
-    
-    {{ form_errors(form) }}
-    
-    {{ form_widget(form) }}
-    
-    <div class="third" id="grupo_provincia">
-<label for="provincia">Província</label>
-<input id="provincia" name="provincia" type="hidden">
-<select id="select_provincia">
-</select>
-</div>
-<div class="third" id="grupo_pais">
-<label for="pais">País</label>
-<input id="pais" name="pais" type="hidden">
-<select id="select_pais">
-</select>
-</div>
-<div class="third" id="grupo_ciudad">
-<label for="ciudad">Ciutat</label>
-<input id="ciudad" name="ciudad" type="hidden">
-<select id="select_ciudad">
-</select>
-</div>
-<div class="third" id="grupo_barrio">
-<label for="barrio">Barri</label>
-<input id="barrio" name="barrio" type="hidden">
-<select id="select_barrio">
-</select>
-</div>
-    
-    <input type="submit" />
-    
-    {{ form_end(form) }}
-    
-    <script src="{{ asset('bundles/ganemosmadridfirmasapoyo/js/main.js') }}"></script>
-    
-{% endblock %}
+    <div class="span9 offset2">
+
+        <h1>APOYA GANEMOS MADRID</h1>
+
+        <p>El formulario de firmas de apoyo patatín patatán.</p>
+
+
+
+        {{ form_start(form, {'attr': {'role': 'form', 'id': 'form0'}}) }}
+        {{ form_errors(form) }}
+
+        <div class="form-group">
+            {{ form_row(form.nombre, {'attr': {'class': 'form-control'}}) }}
+        </div>
+
+        <div class="form-group">
+            {{ form_row(form.nombre, {'attr': {'class': 'form-control'}}) }}
+        </div>
+
+        <div class="form-group">
+            {{ form_row(form.documentoIdentidad, {'attr': {'class': 'form-control', 'placeholder': 'Ej: 12345678Z'}}) }}
+        </div>
+
+        <div class="form-group">
+            {{ form_row(form.email, {'attr': {'class': 'form-control'}}) }}
+        </div>
+
+        <div class="form-group">
+            {{ form_row(form.actividad, {'attr': {'class': 'form-control'}}) }}
+        </div>
+
+        <div class="form-group">
+            {{ form_row(form.ocultarNombre, {'attr': {'class': 'checkbox'}, 'label': '¿Ocultar mis datos en el listado de firmas?'}) }}
+        </div>
+
+        <div class="form-group">
+            {{ form_row(form.suscribirseLista, {'attr': {'class': 'checkbox'}, 'label': '¿Quieres que te inscribamos en la lista de información de GanemosMadrid?'}) }}
+        </div>
+
+        <div class="form-group" id="grupo_provincia">
+            <label for="provincia">Província</label>
+            <input id="provincia" name="provincia" type="hidden">
+            <select id="select_provincia" class="form-control">
+            </select>
+        </div>
+        <div class="form-group" id="grupo_pais">
+            <label for="pais">País</label>
+            <input id="pais" name="pais" type="hidden">
+            <select id="select_pais" class="form-control">
+            </select>
+        </div>
+        <div class="form-group" id="grupo_ciudad">
+            <label for="ciudad">Ciudad</label>
+            <input id="ciudad" name="ciudad" type="hidden">
+            <select id="select_ciudad" class="form-control">
+            </select>
+        </div>
+        <div class="third" id="grupo_barrio">
+            <label for="barrio">Barrio</label>
+            <input id="barrio" name="barrio" type="hidden">
+            <select id="select_barrio" class="form-control">
+            </select>
+        </div>
+
+        <div class="form-group">
+            {{ form_widget(form.save, {'attr': {'class': 'form-control'}, 'label': 'Firmar apoyo', 'attr': {'class': 'btn btn-primary btn-large'}}) }}
+        </div>
+
+        {{ form_end(form) }}
+
+        <script src="{{ asset('bundles/ganemosmadridfirmasapoyo/js/main.js') }}"></script>
+
+    {% endblock %}
