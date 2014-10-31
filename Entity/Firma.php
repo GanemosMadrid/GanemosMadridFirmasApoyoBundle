@@ -41,7 +41,7 @@ class Firma {
     protected $email;
 
     /**
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="string", nullable=TRUE)
      */
     protected $actividad;
 
