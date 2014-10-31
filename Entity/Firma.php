@@ -102,7 +102,8 @@ class Firma {
      * @return Firma
      */
     public function setDocumentoIdentidad($documentoIdentidad) {
-        $this->documentoIdentidad = $documentoIdentidad;
+        
+        $this->documentoIdentidad = ltrim(str_replace(array('_', ' ', '-', '.'), '', $documentoIdentidad), 0);
 
         return $this;
     }

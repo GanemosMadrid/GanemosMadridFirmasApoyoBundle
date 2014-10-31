@@ -12,8 +12,7 @@ class DniNieValidator extends ConstraintValidator {
 
     public function validate($value, Constraint $constraint) {
 
-        $documento = str_replace(array('_', ' ', '-', '.'), '', $value);
-        
+        $documento = ltrim(str_replace(array('_', ' ', '-', '.'), '', $value), 0);
         $numero = substr($documento, 0, -1);
         $letra = strtoupper(substr($documento, -1));
 
