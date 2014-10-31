@@ -3,6 +3,7 @@
 {% block body %}
 
     <h1>Firmas de apoyo</h1>
+    <p>Ya tenemos <strong>{{ pagination.getTotalItemCount }}</strong> firmas.</p>
 
     <table class="table table-striped ">
 
@@ -11,15 +12,19 @@
             <th>Actividad</th>
             <th>Provincia</th>
         </tr>
-        
-        {% for firma in firmas %}
+
+        {% for firma in pagination %}
             <tr>
                 <td>{% if firma.ocultarNombre == 0 %}{{ firma.nombre }}{% else %}**********{% endif %}</td>
                 <td>{{ firma.actividad }}</td>
-                <td>{{ firma.provincia }}</td>
+                <td>{{ firma.ciudad }}</td>
             </tr>
         {% endfor %}
 
     </table>
+
+    <div class="navigation">
+        {{ knp_pagination_render(pagination) }}
+    </div>
 
 {% endblock %}

@@ -17,7 +17,7 @@ class FirmaType extends AbstractType {
                 ->add('nombre')
                 ->add('documentoIdentidad')
                 ->add('email')
-                ->add('actividad')
+                ->add('actividad', 'text', array('required' => false))
                 //->add('provincia', 'choice')
                 //->add('ciudad', 'choice')
                 ->add('ocultarNombre', 'checkbox', array(

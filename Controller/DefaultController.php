@@ -12,20 +12,23 @@ use GanemosMadridFirmasApoyoBundle\Form\FirmaType;
 class DefaultController extends Controller {
 
     /**
-     * @Route("/apoyos")
+     * @Route("/apoyos", name="apoyos")
      */
     public function indexAction() {
 
-        $firmas = $this->getDoctrine()->getEntityManager()
+        $firmas = $this->getDoctrine()->getManager()
                         ->getRepository('GanemosMadridFirmasApoyoBundle:Firma')->findAll();
 
-        return $this->render('GanemosMadridFirmasApoyoBundle:Default:index.html.twig', array(
-                    'firmas' => $firmas,
-        ));
+        $paginator = $this->get('knp_paginator');
+        $pagination = $paginator->paginate(
+                $firmas, $this->get('request')->query->get('page', 1), 2
+        );
+
+        return $this->render('GanemosMadridFirmasApoyoBundle:Default:index.html.twig', array('pagination' => $pagination));
     }
 
     /**
-     * @Route("/apoyos/firmar")
+     * @Route("/apoyos/firmar", name="firmar")
      */
     public function firmarAction(Request $request) {
         $firma = new Firma();
@@ -38,7 +41,7 @@ class DefaultController extends Controller {
 
             $firma->setProvincia($request->request->get('provincia'));
             $firma->setCiudad($request->request->get('ciudad'));
-            
+
             $em = $this->getDoctrine()->getManager();
             $em->persist($firma);
             $em->flush();

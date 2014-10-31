@@ -13,32 +13,24 @@
         {{ form_start(form, {'attr': {'role': 'form', 'id': 'form0'}}) }}
         {{ form_errors(form) }}
 
-        <div class="form-group">
-            {{ form_row(form.nombre, {'attr': {'class': 'form-control'}}) }}
+        <div class="row">
+            <div class="form-group col-md-6">
+                {{ form_row(form.nombre, {'attr': {'class': 'form-control'}}) }}
+            </div>
+
+            <div class="form-group col-md-6">
+                {{ form_row(form.documentoIdentidad, {'attr': {'class': 'form-control', 'placeholder': 'Ej: 12345678Z', 'label': 'DNI - NIE'}}) }}
+            </div>
         </div>
 
-        <div class="form-group">
-            {{ form_row(form.nombre, {'attr': {'class': 'form-control'}}) }}
-        </div>
+        <div class="row">
+            <div class="form-group col-md-6">
+                {{ form_row(form.email, {'attr': {'class': 'form-control'}}) }}
+            </div>
 
-        <div class="form-group">
-            {{ form_row(form.documentoIdentidad, {'attr': {'class': 'form-control', 'placeholder': 'Ej: 12345678Z'}}) }}
-        </div>
-
-        <div class="form-group">
-            {{ form_row(form.email, {'attr': {'class': 'form-control'}}) }}
-        </div>
-
-        <div class="form-group">
-            {{ form_row(form.actividad, {'attr': {'class': 'form-control'}}) }}
-        </div>
-
-        <div class="form-group">
-            {{ form_row(form.ocultarNombre, {'attr': {'class': 'checkbox'}, 'label': '¿Ocultar mis datos en el listado de firmas?'}) }}
-        </div>
-
-        <div class="form-group">
-            {{ form_row(form.suscribirseLista, {'attr': {'class': 'checkbox'}, 'label': '¿Quieres que te inscribamos en la lista de información de GanemosMadrid?'}) }}
+            <div class="form-group col-md-6">
+                {{ form_row(form.actividad, {'attr': {'class': 'form-control'}}) }}
+            </div>
         </div>
 
         <div class="form-group" id="grupo_provincia">
@@ -64,6 +56,14 @@
             <input id="barrio" name="barrio" type="hidden">
             <select id="select_barrio" class="form-control">
             </select>
+        </div>
+
+        <div class="form-group">
+            {{ form_row(form.ocultarNombre, {'attr': {'class': 'checkbox'}, 'label': '¿Ocultar mis datos en el listado de firmas?'}) }}
+        </div>
+
+        <div class="form-group">
+            {{ form_row(form.suscribirseLista, {'attr': {'class': 'checkbox'}, 'label': '¿Quieres que te inscribamos en la lista de información de GanemosMadrid?'}) }}
         </div>
 
         <div class="form-group">
