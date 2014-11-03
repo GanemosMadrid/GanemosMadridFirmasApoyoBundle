@@ -6,7 +6,7 @@
 
     <div class="span9 offset2">
 
-        <h1>APOYA GANEMOS MADRID</h1>
+        <h1>APOYA A GANEMOS MADRID</h1>
 
         <p>El formulario de firmas de apoyo patatín patatán.</p>
 
@@ -36,7 +36,7 @@
         </div>
 
         <div class="form-group" id="grupo_provincia">
-            <label for="provincia">Província</label>
+            <label for="provincia">Provincia</label>
             <input id="provincia" name="provincia" type="hidden">
             <select id="select_provincia" class="form-control">
             </select>
@@ -61,15 +61,15 @@
         </div>
 
         <div class="form-group">
-            {{ form_row(form.ocultarNombre, {'attr': {'class': 'checkbox'}, 'label': '¿Ocultar mis datos en el listado de firmas?'}) }}
+            {{ form_row(form.ocultarNombre, {'attr': {'class': 'checkbox'}, 'label': 'Prefiero que mi firma no aparezca en el listado público'}) }}
         </div>
 
         <div class="form-group">
-            {{ form_row(form.suscribirseLista, {'attr': {'class': 'checkbox'}, 'label': '¿Quieres que te inscribamos en la lista de información de GanemosMadrid?'}) }}
+            {{ form_row(form.suscribirseLista, {'attr': {'class': 'checkbox'}, 'label': '¿Quieres recibir información de vez en cuando sobre lo que ocurre en torno a Ganemos Madrid? A esta lista de correos solo mandaremos un boletín de noticias de vez en cuando'}) }}
         </div>
 
         <div class="form-group">
-            {{ form_widget(form.save, {'attr': {'class': 'form-control'}, 'label': 'Firmar apoyo', 'attr': {'class': 'btn btn-primary btn-large'}}) }}
+            {{ form_widget(form.save, {'attr': {'class': 'form-control'}, 'label': 'Firmar', 'attr': {'class': 'btn btn-primary btn-large'}}) }}
         </div>
 
         {{ form_end(form) }}

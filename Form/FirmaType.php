@@ -23,7 +23,7 @@ class FirmaType extends AbstractType {
                 ->add('ocultarNombre', 'checkbox', array(
                     'required' => false))
                 ->add('suscribirseLista', 'choice', array(
-                    'choices' => array('Si', 'No', 'Ya estoy inscrita'),
+                    'choices' => array('Sí', 'No', 'Mi dirección ya está en esa lista'),
                     'expanded' => true,
                 ))
                 ->add('save', 'submit')
