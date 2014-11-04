@@ -2,7 +2,7 @@
 
 {% block body %}
 
-  {% if app.request.headers.get('referer') == '' %}
+  {% if app.request.query.get('header') == '' %}
     <h1>Listado de apoyos</h1>
   {% endif %}
 

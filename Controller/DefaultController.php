@@ -46,7 +46,7 @@ class DefaultController extends Controller {
             $em->persist($firma);
             $em->flush();
 
-            return $this->redirect($this->generateUrl('ok'));
+            return $this->redirect($this->generateUrl('ok', $request->query->all()));
         }
 
         return $this->render('GanemosMadridFirmasApoyoBundle:Default:firmar.html.twig', array(

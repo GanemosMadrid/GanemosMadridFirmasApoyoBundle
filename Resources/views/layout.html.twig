@@ -38,7 +38,7 @@
 
     <body>
 
-    {% if app.request.headers.get('referer') == '' %}
+    {% if app.request.query.get('header') == '' %}
         <header role="banner" class="site-header" id="masthead">
             <div class="container">
                 <div class="row">

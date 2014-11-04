@@ -31,7 +31,7 @@
 
     <div class="row">
 
-      {% if app.request.headers.get('referer') == '' %}
+      {% if app.request.query.get('header') == '' %}
         <div class="form-group col-xs-3">
             <a class="btn btn-default" href="{{ path('firmar') }}" role="button">Volver</a>
         </div>

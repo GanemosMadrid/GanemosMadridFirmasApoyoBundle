@@ -6,7 +6,7 @@
 
     <div class="span9 offset2">
 
-      {% if app.request.headers.get('referer') == '' %}
+      {% if app.request.query.get('header') == '' %}
         <h1>APOYA A GANEMOS MADRID</h1>
        {% endif %}
 
