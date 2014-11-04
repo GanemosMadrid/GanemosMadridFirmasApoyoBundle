@@ -35,19 +35,23 @@
         <div class="form-group col-xs-3">
             <a class="btn btn-default" href="{{ path('firmar') }}" role="button">Volver</a>
         </div>
+        {#
         <div class="form-group col-xs-4">
             <a class="btn btn-default" href="{{ path('apoyos') }}" role="button">Listado de apoyos</a>
         </div>
-        <div class="form-group col-xs-5">
+        #}
+        <div class="form-group col-xs-5 col-xs-offset-4">
             <a class="btn btn-default pull-right" href="http://ganemosmadrid.info" role="button">Ir ganemosmadrid.info</a>
         </div>
       {% else %}
         <div class="form-group col-xs-6">
             <a class="btn btn-default" href="{{ path('firmar') }}" role="button">Volver</a>
         </div>
+        {#
         <div class="form-group col-xs-6">
             <a class="btn btn-default pull-right" href="{{ path('apoyos') }}" role="button">Listado de apoyos</a>
         </div>
+        #}
       {% endif %}
 
     </div>
