@@ -31,3 +31,11 @@ a.btn-default {
 .row {
     margin-bottom: 10px;
 }
+
+.top_25 {
+    margin-top: 25px;
+}
+
+.text-grey {
+  color: #555;
+}
