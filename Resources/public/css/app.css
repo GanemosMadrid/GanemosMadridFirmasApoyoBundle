@@ -43,3 +43,13 @@ a.btn-default {
 .btn-social {
     width: 200px;
 }
+
+#ganemosmadrid_firmasapoyobundle_firma_ocultarNombre {
+    width: auto;
+    float: left;
+    margin-right: 10px;
+    margin-left: 4px;
+    height: 10px;
+    transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+}
