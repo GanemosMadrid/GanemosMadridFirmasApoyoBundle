@@ -37,6 +37,8 @@
     </head>
 
     <body>
+
+    {% if app.request.headers.get('referer') == '' %}
         <header role="banner" class="site-header" id="masthead">
             <div class="container">
                 <div class="row">
@@ -46,7 +48,7 @@
                 </div>
             </div>
         </header>
-
+     {% endif %}
         <div class="container">
             <div class="col-sm-6 col-md-offset-3">
 

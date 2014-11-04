@@ -6,7 +6,9 @@
 
     <div class="span9 offset2">
 
+      {% if app.request.headers.get('referer') == '' %}
         <h1>APOYA A GANEMOS MADRID</h1>
+       {% endif %}
 
         <p>El formulario de firmas de apoyo patatín patatán.</p>
 
