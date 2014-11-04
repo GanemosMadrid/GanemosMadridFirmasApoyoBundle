@@ -28,7 +28,7 @@ class DefaultController extends Controller {
     }
 
     /**
-     * @Route("/apoyos/firmar", name="firmar")
+     * @Route("/", name="firmar")
      */
     public function firmarAction(Request $request) {
         $firma = new Firma();
