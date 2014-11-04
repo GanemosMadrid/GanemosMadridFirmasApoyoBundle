@@ -39,3 +39,7 @@ a.btn-default {
 .text-grey {
   color: #555;
 }
+
+.btn-social {
+    width: 200px;
+}

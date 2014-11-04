@@ -16,29 +16,40 @@
 
     <h1>¡Muchas gracias, tu firma ha sido registrada!</h1>
 
-    <div class="row">
-        <div class="col-md-6">
+    <div class="row top_25">
+        <div class="col-xs-6 form-group">
             <a href="https://www.facebook.com/sharer/sharer.php?u={{ url('firmar') }}" title="Compartir en Facebook" target="_blank" class="btn btn-block btn-social btn-sm btn-facebook">
                 <i class="fa fa-facebook"></i>Comparte en Facebook
             </a>
         </div>
-        <div class="col-md-6">
-            <a href="https://twitter.com/intent/tweet?text=He apoyado con mi firma a @GanemosMadrid para que todo cambie de una vez en esta ciudad. ¿Tú no? {{ url('firmar') }} @GanemosMadrid" title="Share on Twitter" target="_blank" class="btn btn-block btn-social btn-sm btn-twitter">
+        <div class="col-xs-6 form-group">
+            <a href="https://twitter.com/intent/tweet?text=He apoyado con mi firma a @GanemosMadrid para que todo cambie de una vez en esta ciudad. ¿Tú no? {{ url('firmar') }} @GanemosMadrid" title="Share on Twitter" target="_blank" class="btn btn-block btn-social btn-sm btn-twitter pull-right">
                 <i class="fa fa-twitter"></i>Comparte en Twitter
             </a>
         </div>
     </div>
 
     <div class="row">
-        <div class="form-group col-md-3">
+
+      {% if app.request.headers.get('referer') == '' %}
+        <div class="form-group col-xs-3">
             <a class="btn btn-default" href="{{ path('firmar') }}" role="button">Volver</a>
         </div>
-        <div class="form-group col-md-4">
+        <div class="form-group col-xs-4">
             <a class="btn btn-default" href="{{ path('apoyos') }}" role="button">Listado de apoyos</a>
         </div>
-        <div class="form-group col-md-4">
-            <a class="btn btn-default" href="http://ganemosmadrid.info" role="button">Ir ganemosmadrid.info</a>
+        <div class="form-group col-xs-5">
+            <a class="btn btn-default pull-right" href="http://ganemosmadrid.info" role="button">Ir ganemosmadrid.info</a>
         </div>
+      {% else %}
+        <div class="form-group col-xs-6">
+            <a class="btn btn-default" href="{{ path('firmar') }}" role="button">Volver</a>
+        </div>
+        <div class="form-group col-xs-6">
+            <a class="btn btn-default pull-right" href="{{ path('apoyos') }}" role="button">Listado de apoyos</a>
+        </div>
+      {% endif %}
+
     </div>
 
 
