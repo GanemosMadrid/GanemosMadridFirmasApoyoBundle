@@ -19,27 +19,27 @@
         {{ form_errors(form) }}
 
         <div class="row top_25">
-            <div class="form-group col-md-6">
+            <div class="form-group col-xs-6">
                 {{ form_row(form.nombre, {'attr': {'class': 'form-control'}}) }}
             </div>
 
-            <div class="form-group col-md-6">
+            <div class="form-group col-xs-6">
                 {{ form_row(form.documentoIdentidad, {'attr': {'class': 'form-control', 'placeholder': 'Ej: 12345678Z'}, 'label': 'DNI / NIE'}) }}
             </div>
         </div>
 
         <div class="row">
-            <div class="form-group col-md-6">
+            <div class="form-group col-xs-6">
                 {{ form_row(form.email, {'attr': {'class': 'form-control'}}) }}
             </div>
 
-            <div class="form-group col-md-6">
+            <div class="form-group col-xs-6">
                 {{ form_row(form.actividad, {'attr': {'class': 'form-control'}, 'label': 'Actividad / Profesión'}) }}
             </div>
         </div>
 
         <div class="row">
-            <div class="form-group col-md-6" id="grupo_provincia">
+            <div class="form-group col-xs-6" id="grupo_provincia">
                 <label for="provincia">Provincia</label>
                 <input id="provincia" name="provincia" type="hidden">
                 <select id="select_provincia" class="form-control">
@@ -51,7 +51,7 @@
                 <select id="select_pais" class="form-control">
                 </select>
             </div>
-            <div class="form-group col-md-6" id="grupo_ciudad">
+            <div class="form-group col-xs-6" id="grupo_ciudad">
                 <label for="ciudad">Ciudad</label>
                 <input id="ciudad" name="ciudad" type="hidden">
                 <select id="select_ciudad" class="form-control">
