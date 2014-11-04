@@ -8,17 +8,17 @@
 
       {% if app.request.query.get('header') == '' %}
         <h1>APOYA A GANEMOS MADRID</h1>
-        <p>Quienes vivimos en Madrid queremos recuperar nuestra ciudad.
-Queremos arrebatársela a quienes la han convertido en una fuente de negocio al servicio de los poderosos y en un caldo de cultivo para la corrupción.
-Queremos transformarla en un lugar habitable, una ciudad sostenible, un Madrid para las personas que lo habitamos, lo trabajamos, lo sufrimos y lo disfrutamos.
-Ganemos Madrid nace para poner las instituciones al servicio de la gente, y no tiene sentido sin su apoyo. Nos hemos fijado un número mínimo de 30.000 firmas para saber si una candidatura ciudadana a las elecciones municipales cuenta con respaldo suficiente para comenzar su andadura.
-Por eso, si estás de acuerdo con que necesitamos esta herramienta democrática para gobernar Madrid, firma aquí:</p>
+        <p>Quienes vivimos en Madrid queremos recuperar nuestra ciudad.</p>
+        <p>Queremos arrebatársela a quienes la han convertido en una fuente de negocio al servicio de los poderosos y en un caldo de cultivo para la corrupción.</p>
+        <p>Queremos transformarla en un lugar habitable, una ciudad sostenible, un Madrid para las personas que lo habitamos, lo trabajamos, lo sufrimos y lo disfrutamos.</p>
+        <p>Ganemos Madrid nace para poner las instituciones al servicio de la gente, y no tiene sentido sin su apoyo. Nos hemos fijado un número mínimo de 30.000 firmas para saber si una candidatura ciudadana a las elecciones municipales cuenta con respaldo suficiente para comenzar su andadura.</p>
+        <p>Por eso, si estás de acuerdo con que necesitamos esta herramienta democrática para gobernar Madrid, firma aquí:</p>
        {% endif %}
 
         {{ form_start(form, {'attr': {'role': 'form', 'id': 'form0'}}) }}
         {{ form_errors(form) }}
 
-        <div class="row">
+        <div class="row top_25">
             <div class="form-group col-md-6">
                 {{ form_row(form.nombre, {'attr': {'class': 'form-control'}}) }}
             </div>
