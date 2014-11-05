@@ -17,7 +17,7 @@ class DefaultController extends Controller {
     public function indexAction() {
 
         $firmas = $this->getDoctrine()->getManager()
-                        ->getRepository('GanemosMadridFirmasApoyoBundle:Firma')->findAll();
+                        ->getRepository('GanemosMadridFirmasApoyoBundle:Firma')->findAll(array(), array('id' => 'ASC'));
 
         $paginator = $this->get('knp_paginator');
         $pagination = $paginator->paginate(
