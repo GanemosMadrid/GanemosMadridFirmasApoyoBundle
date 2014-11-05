@@ -86,6 +86,9 @@
             </div>
         </div>
 
-        <script src="{{ asset('bundles/ganemosmadridfirmasapoyo/js/main.js') }}"></script>
+        {% javascripts filter='?uglifyjs'
+            '@GanemosMadridFirmasApoyoBundle/Resources/public/js/main.js'
+        %}
+        {% endjavascripts %}
 
     {% endblock %}

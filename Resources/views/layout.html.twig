@@ -16,22 +16,22 @@
         <link rel="alternate" type="application/rss+xml" title="Ganemos Madrid &raquo; Programa y contenidos RSS de la categoría" href="http://ganemosmadrid.info/category/programa-y-contenidos/feed/" />
         <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
         <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="{{ asset('bundles/ganemosmadridfirmasapoyo/css/bootstrap-social.css') }}">
-        <link rel="stylesheet" href="{{ asset('bundles/ganemosmadridfirmasapoyo/css/app.css') }}">
-        <!-- Latest compiled and minified JavaScript -->
+        <link href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-social/4.2.1/bootstrap-social.min.css" rel="stylesheet">
+        {% stylesheets 'bundles/ganemosmadridfirmasapoyo/css/*' filter='?uglifycss' filter='cssrewrite' %}
+            <link rel="stylesheet" href="{{ asset_url }}" />
+        {% endstylesheets %}
+
         <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-        <script type='text/javascript' src="{{ asset('bundles/ganemosmadridfirmasapoyo/js/jquery-validation/dist/jquery.validate.js') }}"></script>
-        <script type='text/javascript' src="{{ asset('bundles/ganemosmadridfirmasapoyo/js/jquery-validation/dist/localization/messages_es.js') }}"></script>
-        <script type='text/javascript' src="{{ asset('bundles/ganemosmadridfirmasapoyo/js/ciudades.js') }}"></script>
+
+        {% javascripts filter='?uglifyjs'
+            '@GanemosMadridFirmasApoyoBundle/Resources/public/js/jquery-validation/dist/jquery.validate.js'
+            '@GanemosMadridFirmasApoyoBundle/Resources/public/js/jquery-validation/dist//localization/messages_es.js'
+            '@GanemosMadridFirmasApoyoBundle/Resources/public/js/ciudades.js'
+        %}
+            <script type="text/javascript" src="{{ asset_url }}"></script>
+        {% endjavascripts %}
+
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-        <script type='text/javascript'>
-            /* <![CDATA[ */
-            var GoogleCalendarEvents = {"ajaxurl": "http:\/\/ganemosmadrid.info\/wp-admin\/admin-ajax.php", "loading": "Cargando..."};
-            /* ]]> */
-        </script>
-        <script type='text/javascript' src='http://ganemosmadrid.info/wp-content/plugins/google-calendar-events/js/gce-script.js'></script>
-        <meta name="generator" content="WordPress 4.0" />
-        <style type="text/css">a, #infinite-handle span, #secondary .widget .post-content a {color:#75a2ad}a:hover, a:active, #secondary .widget .post-content a:hover {color: #629ead;}.btn-default, .label-default, .flex-caption h2, .btn.btn-default.read-more, button {background-color: #2696ae; border-color: #2696ae;} .site-main [class*="navigation"] a, .more-link { color: #2696ae}.btn-default:hover, .label-default[href]:hover, .tagcloud a:hover, button, .main-content [class*="navigation"] a:hover, .label-default[href]:focus, #infinite-handle span:hover, .btn.btn-default.read-more:hover, .btn-default:hover, .scroll-to-top:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .site-main [class*="navigation"] a:hover, .more-link:hover, #image-navigation .nav-previous a:hover, #image-navigation .nav-next a:hover, .cfa-button:hover { background-color: #72a2ad; border-color: #72a2ad; }.navbar.navbar-default {background-color: #2696ae;}.dropdown-menu {background-color: #2696ae;}.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus, .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus, .dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {background-color: ; color:#72a2ad}#colophon {background-color: #000000;}#footer-area, .site-info {color: #ffffff;}#footer-area {background-color: #000000;}.entry-content {font-family: Open Sans; font-size:14px; font-weight: normal; color:#6B6B6B;}</style><!-- All in one Favicon 4.3 --><link rel="icon" href="http://ganarmadrid.net/wp-content/uploads/2014/07/favicon2.png" type="image/png"/>
         <link rel="shortcut icon" href="http://ganarmadrid.net/wp-content/uploads/2014/07/favicon.png" />
         <link rel="icon" href="http://ganarmadrid.net/wp-content/uploads/2014/07/favicon1.png" type="image/gif"/>
     </head>
