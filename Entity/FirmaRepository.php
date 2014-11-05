@@ -13,7 +13,7 @@ use Doctrine\ORM\EntityRepository;
 class FirmaRepository extends EntityRepository {
 
     public function findAll() {
-        return $this->createQueryBuilder("f");
+        return $this->createQueryBuilder("f")->orderBy('f.id');
     }
 
 }
