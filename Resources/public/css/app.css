@@ -53,3 +53,7 @@ a.btn-default {
     transform: scale(1.5);
     -webkit-transform: scale(1.5);
 }
+
+#listadoFirmas td {
+    text-transform: uppercase;
+}
