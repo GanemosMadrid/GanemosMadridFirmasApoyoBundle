@@ -35,13 +35,13 @@ class Firma {
     protected $documentoIdentidad;
 
     /**
-     * @ORM\Column(type="string", unique=true)
+     * @ORM\Column(type="string", unique=true, nullable=true)
      * @Assert\Email()
      */
     protected $email;
 
     /**
-     * @ORM\Column(type="string", nullable=TRUE)
+     * @ORM\Column(type="string", nullable=true)
      */
     protected $actividad;
 

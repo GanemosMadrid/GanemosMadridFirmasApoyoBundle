@@ -16,7 +16,7 @@ class FirmaType extends AbstractType {
         $builder
                 ->add('nombre')
                 ->add('documentoIdentidad')
-                ->add('email')
+                ->add('email', 'email', array('required' => false))
                 ->add('actividad', 'text', array('required' => false))
                 //->add('provincia', 'choice')
                 //->add('ciudad', 'choice')
